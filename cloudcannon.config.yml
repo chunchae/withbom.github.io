@@ -1,0 +1,98 @@
+paths:
+  uploads: uploads
+  data: _data
+  layouts: _layouts
+  includes: _includes
+collections_config:
+  data:
+    path: _data
+    output: false
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  posts:
+    path: _posts
+    output: true
+    icon: notes
+    create:
+      path: >-
+        [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  pages:
+    output: true
+    filter: strict
+    icon: notes
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+  staff_members:
+    path: _staff_members
+    output: false
+    icon: account_circle
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+_inputs:
+  categories:
+    type: multiselect
+    options:
+      allow_create: true
+      empty_type: array
+    cascade: true
+  tags:
+    type: multiselect
+    options:
+      allow_create: true
+      empty_type: array
+    cascade: true
+  description:
+    type: textarea
+    comment: Text shown when sharing on social media
+    cascade: true
+  blurb:
+    type: text
+    comment: Short bio or description of this person
+    cascade: true
+_select_data:
+  author:
+    name:
+    email:
+    twitter:
+  social:
+    name: Frisco Template
+    links:
+      - https://github.com/CloudCannon/frisco-jekyll-template
+  jekyll-archives:
+    layout: archive
+    enabled:
+      - categories
+    permalinks:
+      year: /:year/
+      month: /:year/:month/
+      day: /:year/:month/:day/
+      tag: /tag/:name/
+      category: /category/:name/
+  social_icons:
+    - Facebook
+    - Google Plus
+    - Instagram
+    - LinkedIn
+    - Pinterest
+    - Tumblr
+    - Twitter
+    - YouTube
+    - Email
+    - RSS
+  archives:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+_structures: {}
+_editables: {}
+data_config: {}
+timezone: Asia/Seoul
